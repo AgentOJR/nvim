@@ -15,15 +15,7 @@ return {
 		end
 
 		-- LSP SERVERS
-		lspconfig.ruff_lsp.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 		lspconfig.biome.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.pyright.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
@@ -52,6 +44,11 @@ return {
 		})
 		lspconfig.vimls.setup({
 			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+		lspconfig.ruff.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
 		})
 
 		-- Global mappings.
