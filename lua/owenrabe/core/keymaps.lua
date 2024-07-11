@@ -17,3 +17,7 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 
 -- Conform Formatting
 vim.keymap.set("n", "<leader>f", "<cmd>lua require('conform').format()<cr>", { desc = "Format" })
+
+-- Start And End of File Jump (Big H and Big L)
+vim.keymap.set({ "n", "x", "o" }, "H", "^")
+vim.keymap.set({ "n", "x", "o" }, "L", "$")
