@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
 --Find
 
-vim.keymap.set("n", "<leader>fv", "<cmd>Ex<cr>")
+vim.keymap.set("n", "<leader>fv", "<cmd>Oil<cr>")
 
 --Telescope
 
