@@ -21,3 +21,7 @@ vim.keymap.set("n", "<leader>f", "<cmd>lua require('conform').format()<cr>", { d
 -- Start And End of File Jump (Big H and Big L)
 vim.keymap.set({ "n", "x", "o" }, "H", "^")
 vim.keymap.set({ "n", "x", "o" }, "L", "$")
+
+--LSP Binds
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
