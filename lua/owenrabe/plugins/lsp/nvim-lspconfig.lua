@@ -54,6 +54,10 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions

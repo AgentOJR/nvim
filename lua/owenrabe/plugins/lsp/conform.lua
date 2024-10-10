@@ -16,6 +16,7 @@ return {
 				cpp = { "clang-format" },
 				c = { "clang-format" },
 				java = { "clang-format" },
+				go = { "gci" },
 			},
 		})
 	end,
