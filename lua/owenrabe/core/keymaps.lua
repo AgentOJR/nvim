@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 
 -- General
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
+vim.keymap.set("n", "<leader>mm", "<cmd>Alpha<cr>")
 --Find
 
 vim.keymap.set("n", "<leader>fv", "<cmd>Oil<cr>")
