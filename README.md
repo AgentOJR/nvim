@@ -17,7 +17,10 @@ Welcome to my personal Neovim configuration! This setup is designed for a produc
 - **Git**
 - **Node.js** (for some plugins that require it)
 - **ripgrep** (for faster searching)
-- **fd** (optional but recommended for file searching)
+- **fzf** (for fuzzy finding) 
+- **Some Nerd Font** (for icons in the status line)
+- **Python 3** (for some LSP servers)
+- **C++ compiler** (for some LSP servers)
 
 ## Installation
 1. Clone this repository to your Neovim configuration directory:
@@ -34,8 +37,10 @@ Welcome to my personal Neovim configuration! This setup is designed for a produc
 - **Fast and Lightweight**: Minimal plugins and streamlined setup for maximum performance.
 - **Intuitive Keybindings**: Custom key mappings designed for efficient navigation and editing.
 - **LSP Integration**: Full support for Language Server Protocol (LSP) with autocompletion, diagnostics, and more.
-- **File Management**: Easy navigation and file management with Telescope and `fd`.
+- **File Management**: Easy navigation and file management with Telescope and `Oil`.
 - **Git Integration**: Git commands and status available within Neovim.
+- **Git Simplified**: Lazygit integration for a simplified Git experience.
+- **Syntax Highlighting**: Powered by Treesitter for better syntax highlighting and code parsing.
 - **Terminal Integration**: Seamless terminal experience directly inside Neovim.
 
 ## Plugins
@@ -44,14 +49,16 @@ My configuration is powered by `lazy.nvim`, which is used to manage plugins. Her
 - **lazy.nvim**: Plugin manager for fast and efficient plugin management.
 - **nvim-treesitter**: Syntax highlighting and code parsing.
 - **nvim-lspconfig**: Language server configurations for multiple languages.
-- **cmp-nvim-lsp**: Autocompletion for LSP.
+- **nvim-cmp**: Autocompletion for LSP.
 - **telescope.nvim**: Fuzzy finder for files, buffers, and more.
-- **curl.nvim**: For running `curl` commands directly from Neovim.
 - **lualine.nvim**: Aesthetic and informative status line.
 - **gitsigns.nvim**: Git integration and gutter signs.
+- **lazygit.nvim**: Lazygit integration for a simplified Git experience.
+- **nvim-autopairs**: Autopairs for brackets, quotes, and more.
+- **Conform**: Autoformatting for code.
 
 ## Configuration Highlights
-- **LSP Setup**: Configured with `nvim-lspconfig` and `cmp-nvim-lsp` for autocompletion and language support. Language servers for several popular languages are pre-configured, including TypeScript, Python, and Lua.
+- **LSP Setup**: Configured with `nvim-lspconfig` and `nvim-cmp` for autocompletion and language support. Language servers for several popular languages are pre-configured, including TypeScript, Python, and Lua.
 - **Treesitter**: Provides syntax highlighting and better code parsing for an improved coding experience.
 - **Telescope**: Fuzzy finder for files and text within the project, using `fd` for fast file searches.
 - **Keybindings**: Custom mappings for common actions like buffer management, file navigation, and more.
@@ -63,7 +70,7 @@ My configuration is powered by `lazy.nvim`, which is used to manage plugins. Her
 - `<leader>rn`: Rename a symbol (LSP).
 - `<leader>ca`: Code actions (LSP).
 
-*(You can expand this section with specific keybindings unique to your workflow)*
+**Note**: The `<leader>` key is set to ` ` by default. You can change this in `keybindings.lua` if you prefer a different key. Additionally, you can find more keybindings and mappings in the configuration files.
 
 ## Acknowledgments
 This configuration was inspired by the Neovim community and various resources across the web. Special thanks to the creators of Neovim and all the contributors to the plugins used here.
