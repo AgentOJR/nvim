@@ -19,4 +19,11 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 	},
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		-- Add in any other configuration;
+		--   event = foo,
+		--   config = bar
+		--   end,
+	},
 }
