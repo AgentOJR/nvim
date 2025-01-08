@@ -26,4 +26,7 @@ return {
 		--   config = bar
 		--   end,
 	},
+	{
+		"ClearAspect/onehalf",
+	},
 }
