@@ -15,8 +15,15 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "tokyonight" } },
+	install = { colorscheme = { "onehalfdark" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme onehalfdark")
+vim.api.nvim_set_hl(0, "AlphaA", { fg = "#53C670", bg = "NONE" })
+vim.api.nvim_set_hl(0, "AlphaB", { fg = "#3399ff", bg = "NONE" })
+vim.api.nvim_set_hl(0, "AlphaG", { fg = "#39ac56", bg = "NONE" })
+vim.api.nvim_set_hl(0, "AlphaH", { fg = "#33994d", bg = "NONE" })
+vim.api.nvim_set_hl(0, "AlphaI", { fg = "#33994d", bg = "#39ac56" }) -- No background color
+vim.api.nvim_set_hl(0, "AlphaJ", { fg = "#53C670", bg = "#33994d" }) -- No background color
+vim.api.nvim_set_hl(0, "AlphaK", { fg = "#30A572", bg = "NONE" })

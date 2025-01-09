@@ -28,5 +28,8 @@ return {
 	},
 	{
 		"ClearAspect/onehalf",
+		lazy = false,
+
+		priority = 1000,
 	},
 }
