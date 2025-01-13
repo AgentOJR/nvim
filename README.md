@@ -21,6 +21,7 @@ Welcome to my personal Neovim configuration! This setup is designed for a produc
 - **Some Nerd Font** (for icons in the status line)
 - **Python 3** (for some LSP servers)
 - **C++ compiler** (for some LSP servers)
+- **C Compiler** (for some LSP servers, will run without but it will not be happy)
 
 ## Installation
 1. Clone this repository to your Neovim configuration directory:
