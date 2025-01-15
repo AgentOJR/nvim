@@ -1,7 +1,9 @@
-//{{_author_}}
-////[Program description]
-//{{_date_}}
-// 169069086
+/*
+ * @author {{_author_}}
+ * [Program description]
+ * @version {{_date_}}
+ *  169069086
+ */
 #include <stdio.h>
 int main() {
   // printf() displays the string inside quotation
