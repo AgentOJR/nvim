@@ -1,12 +1,5 @@
 return {
-	--     "vhyrro/luarocks.nvim",
-	--     priority = 1001, -- this plugin needs to run before anything else
-	--     opts = {
-	--         rocks = { "magick" },
-	--     },
-	-- },
-	-- {
-	--     "3rd/image.nvim",
-	--     dependencies = { "luarocks.nvim" },
-	--     opts = {}
+	-- "3rd/image.nvim",
+	-- build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
+	-- opts = {},
 }
