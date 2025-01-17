@@ -27,9 +27,8 @@ return {
 		--   end,
 	},
 	{
-		dir = "~/Documents/Colourschemes/onehalf-owenbranch/",
+		"ClearAspect/onehalf",
 		lazy = false,
-
 		priority = 1000,
 	},
 }

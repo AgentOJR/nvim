@@ -31,7 +31,6 @@ return {
 				"ruff",
 				"rust_analyzer",
 				"vimls",
-				"ts_ls",
 			},
 			automatic_installation = true,
 		})
