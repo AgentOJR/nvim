@@ -14,5 +14,23 @@ return {
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		},
+		config = function()
+			local noice = require("noice")
+			local notify = require("notify")
+
+			noice.setup({
+				presets = {},
+				views = {
+					mini = {
+						win_options = {
+							winblend = 0,
+						},
+					},
+				},
+			})
+			notify.setup({
+				background_colour = "NotifyBackground",
+			})
+		end,
 	},
 }
