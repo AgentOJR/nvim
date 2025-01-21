@@ -28,8 +28,11 @@ return {
 				c = { "clang-format" },
 				java = { "clang-format" },
 				css = { "prettier" },
-				nix = { "alejandra" },
+				nix = { "lejandra" },
 				zig = { "zig fmt" },
+				yaml = { "yq" },
+				html = { "prettier" },
+				-- Use a string to run a single formatter
 			},
 		})
 	end,

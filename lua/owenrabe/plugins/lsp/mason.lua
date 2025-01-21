@@ -31,6 +31,7 @@ return {
 				"ruff",
 				"rust_analyzer",
 				"vimls",
+				"zls",
 			},
 			automatic_installation = true,
 		})
@@ -40,6 +41,8 @@ return {
 				"clang-format", -- c/c++ formatter
 				"ruff", -- python formatter
 				"stylua", -- lua formatter
+				"prettier", -- javascript, typescript, javascriptreact, typescriptreact, json, jsonc, css, html formatter
+				"yq", -- yaml formatter
 			},
 			automatic_installation = true,
 		})
