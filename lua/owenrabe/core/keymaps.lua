@@ -26,7 +26,7 @@ vim.keymap.set({ "n", "x", "o" }, "L", "$")
 
 --LSP Binds
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Open Code Actions" })
 
 --Timewaste
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
