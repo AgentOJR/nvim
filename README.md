@@ -26,7 +26,7 @@ Welcome to my personal Neovim configuration! This setup is designed for a produc
 ## Installation
 1. Clone this repository to your Neovim configuration directory:
    ```bash
-   git clone github.com/agentojr/nvim ~/.config/nvim
+   git clone github.com/agentojr/nvim /AppData/Local/nvim
    ```
 2. Open Neovim and run the following command to install plugins:
    ```vim
