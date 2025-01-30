@@ -3,12 +3,12 @@ return {
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "main",
 		dependencies = {
-			{ "github/copilot.vim" }, -- or github/copilot.vim
-			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-			{ "nvim-telescope/telescope.nvim" }, -- Use telescope for help actions
+			{ "github/copilot.vim" },
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope.nvim" },
 		},
 		opts = {
-			debug = true, -- Enable debugging
+			debug = false, -- Enable debugging
 			show_help = true, -- Show help actions
 			window = {
 				layout = "float",
