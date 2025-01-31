@@ -1,0 +1,27 @@
+return {
+	-- -- First, ensure nui.nvim is loaded as a separate plugin
+	-- {
+	-- 	"MunifTanjim/nui.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000, -- Very high priority to ensure it loads first
+	-- },
+	-- {
+	-- 	"agentojr/floating-term.nvim",
+	-- 	dependencies = { "MunifTanjim/nui.nvim" },
+	-- 	lazy = false,
+	-- 	priority = 900, -- Lower priority than nui.nvim
+	-- 	config = function()
+	-- 		-- Add a delay to ensure nui.nvim is fully loaded
+	-- 		vim.defer_fn(function()
+	-- 			local ok, floating_term = pcall(require, "floating-term")
+	-- 			if ok then
+	-- 				floating_term.setup({
+	-- 					disable_default_keymap = false,
+	-- 				})
+	-- 			else
+	-- 				vim.notify("Failed to load floating-term: " .. tostring(floating_term), vim.log.levels.ERROR)
+	-- 			end
+	-- 		end, 100) -- 100ms delay
+	-- 	end,
+	-- },
+}
