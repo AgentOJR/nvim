@@ -32,6 +32,9 @@ return {
 				zig = { "zig fmt" },
 				yaml = { "yq" },
 				html = { "prettier" },
+				markdown = { "prettier" },
+				toml = { "prettier" },
+				rust = { "rustfmt" },
 				-- Use a string to run a single formatter
 			},
 		})
