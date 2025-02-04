@@ -32,6 +32,7 @@ return {
 				"rust_analyzer",
 				"vimls",
 				"zls",
+				"gopls",
 			},
 			automatic_installation = true,
 		})
