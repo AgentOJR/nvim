@@ -28,3 +28,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		require("conform").format({ bufnr = args.buf })
 	end,
 })
+
+--diagnostics
+vim.diagnostic.config({ virtual_lines = true })
