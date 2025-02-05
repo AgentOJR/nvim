@@ -56,10 +56,6 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
-		lspconfig.prisma_language_server.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
