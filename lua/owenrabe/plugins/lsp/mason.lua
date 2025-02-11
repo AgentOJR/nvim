@@ -33,6 +33,7 @@ return {
 				"vimls",
 				"zls",
 				"gopls",
+				"sqls",
 			},
 			automatic_installation = true,
 		})
