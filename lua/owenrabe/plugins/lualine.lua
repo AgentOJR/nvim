@@ -137,7 +137,7 @@ return {
 
 			local function getLspName()
 				local language_servers = ""
-				local lsp = vim.lsp.buf_get_clients()
+				local lsp = vim.lsp.get_clients()
 				if lsp then
 					for _, client in pairs(lsp) do
 						-- exclude copilot
