@@ -35,6 +35,7 @@ return {
 				markdown = { "prettier" },
 				toml = { "prettier" },
 				rust = { "rustfmt" },
+				assembly = { "asmfmt" },
 				-- Use a string to run a single formatter
 			},
 		})
