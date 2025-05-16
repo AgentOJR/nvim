@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>mm", "<cmd>Alpha<cr>", { desc = "Open Alpha" })
 --Find
 
 vim.keymap.set("n", "<leader>fv", "<cmd>Oil<cr>", { desc = "Open Oil file Browser" })
-
+vim.keymap.set("n", "<leader>nt", "<cmd>Neotree<cr>", { desc = "Toggle Neotree" })
 --Telescope
 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzily Find Files with Telescope" })
