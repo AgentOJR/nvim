@@ -9,25 +9,61 @@ return {
 		-- Get capabilities from blink.cmp
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-		-- Define list of servers to setup
-		local servers = {
-			"biome",
-			"rust_analyzer",
-			"clangd",
-			"jdtls",
-			"vimls",
-			"ruff",
-			"gopls",
-			"sqls",
+		-- Setup biome for JavaScript/TypeScript
+		vim.lsp.config.biome = {
+			capabilities = capabilities,
+			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "jsonc" },
 		}
+		vim.lsp.enable("biome")
 
-		-- Setup servers with default config using new vim.lsp.config API
-		for _, server in ipairs(servers) do
-			vim.lsp.config[server] = {
-				capabilities = capabilities,
-			}
-			vim.lsp.enable(server)
-		end
+		-- Setup rust_analyzer for Rust
+		vim.lsp.config.rust_analyzer = {
+			capabilities = capabilities,
+			filetypes = { "rust" },
+		}
+		vim.lsp.enable("rust_analyzer")
+
+		-- Setup clangd for C/C++
+		vim.lsp.config.clangd = {
+			capabilities = capabilities,
+			filetypes = { "c", "cpp", "objc", "objcpp" },
+		}
+		vim.lsp.enable("clangd")
+
+		-- Setup vimls for Vim
+		vim.lsp.config.vimls = {
+			capabilities = capabilities,
+			filetypes = { "vim" },
+		}
+		vim.lsp.enable("vimls")
+
+		-- Setup gopls for Go
+		vim.lsp.config.gopls = {
+			capabilities = capabilities,
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+		}
+		vim.lsp.enable("gopls")
+
+		-- Setup sqls for SQL
+		vim.lsp.config.sqls = {
+			capabilities = capabilities,
+			filetypes = { "sql", "mysql" },
+		}
+		vim.lsp.enable("sqls")
+
+		-- Setup jdtls for Java
+		vim.lsp.config.jdtls = {
+			capabilities = capabilities,
+			filetypes = { "java" },
+		}
+		vim.lsp.enable("jdtls")
+
+		-- Setup ruff for Python
+		vim.lsp.config.ruff = {
+			capabilities = capabilities,
+			filetypes = { "python" },
+		}
+		vim.lsp.enable("ruff")
 
 		-- Setup lua_ls with custom settings
 		vim.lsp.config.lua_ls = {
