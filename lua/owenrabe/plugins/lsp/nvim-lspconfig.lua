@@ -3,31 +3,35 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"saghen/blink.cmp",
-		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		"nvimdev/lspsaga.nvim",
 	},
-	-- Setup language servers.
 	config = function()
-		local lspconfig = require("lspconfig")
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local opts = { noremap = true, silent = true }
-		local on_attach = function(client, bufnr)
-			opts.buffer = bufnr
+		-- Get capabilities from blink.cmp
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
+
+		-- Define list of servers to setup
+		local servers = {
+			"biome",
+			"rust_analyzer",
+			"clangd",
+			"jdtls",
+			"vimls",
+			"ruff",
+			"gopls",
+			"sqls",
+		}
+
+		-- Setup servers with default config using new vim.lsp.config API
+		for _, server in ipairs(servers) do
+			vim.lsp.config[server] = {
+				capabilities = capabilities,
+			}
+			vim.lsp.enable(server)
 		end
 
-		-- LSP SERVERS
-		lspconfig.biome.setup({
+		-- Setup lua_ls with custom settings
+		vim.lsp.config.lua_ls = {
 			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.rust_analyzer.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.lua_ls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -35,31 +39,8 @@ return {
 					},
 				},
 			},
-		})
-		lspconfig.clangd.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.jdtls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.vimls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.ruff.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.gopls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig.sqls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
+		}
+		vim.lsp.enable("lua_ls")
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
