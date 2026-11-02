@@ -18,6 +18,7 @@ require("lazy").setup({
 	install = { colorscheme = { "onehalfdark" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+	performance = { reset_packpath = false },
 })
 vim.cmd("colorscheme onehalfdark")
 vim.api.nvim_set_hl(0, "AlphaA", { fg = "#53C670", bg = "NONE" })
